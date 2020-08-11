@@ -1,0 +1,15 @@
+button {
+    cursor: pointer;
+}
+
+@media(min-width: 700px) {
+    .mobile-only {
+        display: none!important;
+    }
+}
+
+@media(max-width: 700px) {
+    .desktop-only {
+        display: none!important;
+    }
+}
