@@ -1,6 +1,60 @@
+body {
+  margin: 0;
+}
+
+header {
+  height: 50px;
+  background-color: #e4e4e4;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+header .sky-logo {
+  color: #df4444;
+}
+header .hamburguer-menu {
+  color: #2b2b2b;
+}
+
+nav ul {
+  list-style-type: none;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  height: 50px;
+  line-height: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+}
+nav ul li {
+  font-weight: 700;
+}
+nav ul li.selected {
+  color: #df4444;
+  border-bottom: thick solid #df4444;
+}
+nav ul li.unselected {
+  color: #2b2b2b;
+}
+
 footer {
   width: 100%;
-  background-color: grey;
+  background-color: #e4e4e4;
+}
+
+@media (min-width: 700px) {
+  .mobile-only {
+    display: none;
+  }
+
+  header {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+@media (max-width: 700px) {
+  .desktop-only {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
