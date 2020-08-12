@@ -25,7 +25,7 @@ header {
   border-bottom: 1px solid #a5a5a5;
   display: grid;
   place-items: center;
-  grid-template-columns: 120px auto 70px;
+  grid-template-columns: auto 1fr auto;
 }
 header .sky-logo {
   color: #f35c58;
@@ -96,6 +96,11 @@ nav ul li.unselected {
 footer {
   width: 100%;
   background-color: #e4e4e4;
+}
+footer .sky-social-media {
+  border-bottom: 1px solid #a5a5a5;
+  border-top: 1px solid #a5a5a5;
+  height: 50px;
 }
 
 @media (min-width: 700px) {

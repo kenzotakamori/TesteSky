@@ -14,7 +14,7 @@ header {
     border-bottom: $border;
     display: grid;
     place-items: center;
-    grid-template-columns: 120px auto 70px;
+    grid-template-columns: auto 1fr auto;
     .sky-logo {
         color: $font-color-secondary;
         display: grid;
@@ -87,6 +87,11 @@ nav ul {
 footer {
     width: 100%;
     background-color: $background-primary;
+    .sky-social-media {
+        border-bottom: $border;
+        border-top: $border;
+        height: 50px;
+    }
 }
 
 @media(min-width: 700px) {
