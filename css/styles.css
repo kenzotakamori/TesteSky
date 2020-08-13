@@ -108,6 +108,11 @@ nav ul li.unselected {
   color: #494949;
 }
 
+@media (min-width: 700px) {
+  header .container {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
 footer {
   width: 100%;
   background-color: #e4e4e4;
@@ -204,10 +209,6 @@ footer section#sky-rights .far {
 }
 
 @media (min-width: 700px) {
-  header .container {
-    grid-template-columns: repeat(5, 1fr);
-  }
-
   footer section#sky-information .container {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;

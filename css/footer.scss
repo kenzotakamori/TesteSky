@@ -1,0 +1,129 @@
+footer {
+    width: 100%;
+    background-color: $background-primary;
+    a {
+        text-decoration: none;
+        color: $font-color-primary;
+        font-weight: 600;
+        line-height: 30px;
+        &:hover {
+            color: $font-color-secondary;
+        }
+    }
+    section#sky-social-media {
+        border-bottom: $border;
+        border-top: $border;
+        padding: $padding;
+        .container {
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            place-items: center;
+            .logo-sky-footer {
+                display: grid;
+                grid-column: 1 / 2;
+            }
+            .social-icons {
+                grid-column: 3 / 4;
+                display: grid;
+                place-items: center;
+                grid-template-columns: repeat(4, 1fr);
+                button {
+                    color: $font-color-primary;
+                    font-weight: 700;
+                    background: none;
+                    border: none;
+                    font-size: large;             
+                    &:hover {
+                        color: $font-color-secondary;
+                    }
+                }
+            }
+        }
+    }
+    section#sky-information {
+        padding: $padding;
+        .sky-app {
+            .minha-sky {
+                display: grid;
+                place-items: center;
+                grid-template-columns: auto 1fr;
+                height: 90px;
+                img {
+                    height: 60px;
+                }
+                p {
+                    color: $font-color-secondary;
+                    font-weight: 700;
+                    font-size: 1.25rem;
+                    line-height: 30px;
+                    padding-left: 20px;
+                }
+            }
+            .apple-store, .google-play {
+                width: 100px;
+                display: grid;
+                grid-template-columns: auto auto;
+                place-items: center;
+            }
+        }
+        h3 {
+            display: grid;
+            grid-template-columns: 1fr auto;
+        }
+        .links {
+            display: inline-grid;
+        }
+    }    
+    section#breadcrumbs {
+        padding: $padding;
+        background-color: #fff;
+        font-weight: 600;
+        line-height: 30px;
+        span {
+            color: $font-color-primary;
+            padding-right: 10px;
+            padding-left: 10px;
+        }
+    }
+    section#sky-rights{
+        padding: $padding;
+        text-align: center;
+        color: $font-color-primary;
+        .far {
+            font-weight: 100;
+        }
+    }
+}
+
+@media(min-width: 700px) {
+    footer {
+        section#sky-information {
+            .container {
+                display: grid;
+                grid-template-columns: 2fr 1fr 1fr;
+                .sky-app {
+                    grid-column: 1 / 2;
+                    padding-right: 60px;
+                    .minha-sky {
+                        p {
+                            color: $font-color-primary;
+                            padding-right: 30px;
+                        }
+                    }
+                }
+                .footer-about {
+                    grid-column: 2 / 3;
+                }
+                .footer-responsibilities {
+                    grid-column: 3 / 4;
+                }
+                .footer-help {
+                    grid-column: 2 / 3;
+                }
+                .footer-sky-companies {
+                    grid-column: 3 / 4;
+                }
+            }
+        }
+    }
+}

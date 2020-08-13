@@ -1,0 +1,91 @@
+header {
+    background-color: $background-primary;
+    border-bottom: $border;
+    padding: $padding;
+    .container {
+        display: grid;
+        place-items: center;
+        grid-template-columns: auto 1fr auto;
+        .sky-logo {
+            color: $font-color-secondary;
+            display: grid;
+            grid-column: 1 / 2;
+        }
+        .hamburguer-menu {
+            color: $font-color-primary;
+            display: grid;
+            grid-column: 3 / 4;
+        }
+        .header-icons {
+            button {
+                background: #fff;
+                width: 25px;
+                height: 25px;
+                border-radius: 12.5px;
+                border-style: none;
+                &:hover {
+                    background-color: #a1a1a1;
+                }
+                div {
+                    color: $font-color-primary;
+                    font-weight: 1000;
+                }
+            }
+        }
+        button {
+            color: $font-color-primary;
+            font-weight: 700;
+            &.hamburguer-menu, &.play-button, &.login-button, &.search-button {
+                background: none;
+                border: none;
+                display: grid;
+                place-items: center;
+                font-size: large;
+                &:hover {
+                    color: $font-color-secondary;
+                }
+            }
+            &.play-button, &.login-button {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    }
+} 
+
+nav ul {
+    list-style-type: none;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    height: 50px;
+    line-height: 50px;
+    font-size: large;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    box-shadow: $shadow;
+    -webkit-box-shadow: $shadow;
+    -moz-box-shadow: $shadow;
+    li {
+        font-weight: 700;
+        &.selected {
+            color: $font-color-secondary;
+            box-shadow: inset 0px -5px $font-color-secondary;
+            -webkit-box-shadow: inset 0px -5px $font-color-secondary;
+            -moz-box-shadow: inset 0px -5px $font-color-secondary;
+        }
+        &.unselected {
+            color: $font-color-primary;
+        }
+    }    
+}
+
+
+
+@media(min-width: 700px) {
+    header {
+        .container {
+            grid-template-columns: repeat(5, 1fr);
+        }
+    }
+}
