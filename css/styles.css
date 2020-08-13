@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap");
-button {
+button, a {
   cursor: pointer;
+}
+
+.inactive {
+  display: none !important;
 }
 
 @media (min-width: 700px) {
@@ -19,10 +23,9 @@ body {
 }
 
 header {
-  height: 50px;
-  line-height: 50px;
   background-color: #e4e4e4;
   border-bottom: 1px solid #a5a5a5;
+  padding: 15px 20px 15px 20px;
   display: grid;
   place-items: center;
   grid-template-columns: auto 1fr auto;
@@ -30,10 +33,12 @@ header {
 header .sky-logo {
   color: #f35c58;
   display: grid;
+  grid-column: 1/2;
 }
 header .hamburguer-menu {
   color: #494949;
   display: grid;
+  grid-column: 3/4;
 }
 header .header-icons button {
   background: #fff;
@@ -58,11 +63,13 @@ header button.hamburguer-menu, header button.play-button, header button.login-bu
   border: none;
   display: grid;
   place-items: center;
-  grid-template-columns: 1fr 1fr;
   font-size: large;
 }
 header button.hamburguer-menu:hover, header button.play-button:hover, header button.login-button:hover, header button.search-button:hover {
   color: #f35c58;
+}
+header button.play-button, header button.login-button {
+  grid-template-columns: 1fr 1fr;
 }
 
 nav ul {
@@ -97,15 +104,117 @@ footer {
   width: 100%;
   background-color: #e4e4e4;
 }
-footer .sky-social-media {
+footer a {
+  text-decoration: none;
+  color: #494949;
+  font-weight: 600;
+  line-height: 30px;
+}
+footer a:hover {
+  color: #f35c58;
+}
+footer section#sky-social-media {
   border-bottom: 1px solid #a5a5a5;
   border-top: 1px solid #a5a5a5;
-  height: 50px;
+  padding: 15px 20px 15px 20px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  place-items: center;
+}
+footer section#sky-social-media .logo-sky-footer {
+  display: grid;
+  grid-column: 1/2;
+}
+footer section#sky-social-media .social-icons {
+  grid-column: 3/4;
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(4, 1fr);
+}
+footer section#sky-social-media .social-icons button {
+  color: #494949;
+  font-weight: 700;
+  background: none;
+  border: none;
+  font-size: large;
+}
+footer section#sky-social-media .social-icons button:hover {
+  color: #f35c58;
+}
+footer section#sky-information {
+  padding: 15px 20px 15px 20px;
+}
+footer section#sky-information .sky-app .minha-sky {
+  display: grid;
+  place-items: center;
+  grid-template-columns: auto 1fr;
+  height: 90px;
+}
+footer section#sky-information .sky-app .minha-sky img {
+  height: 60px;
+}
+footer section#sky-information .sky-app .minha-sky p {
+  color: #f35c58;
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 30px;
+  padding-left: 20px;
+}
+footer section#sky-information h3 {
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+footer section#sky-information .links {
+  display: inline-grid;
+}
+footer section#breadcrumbs {
+  padding: 15px 20px 15px 20px;
+  background-color: #fff;
+  font-weight: 600;
+  line-height: 30px;
+}
+footer section#breadcrumbs span {
+  color: #494949;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+footer section#sky-rights {
+  padding: 15px 20px 15px 20px;
+  text-align: center;
+  color: #494949;
+}
+footer section#sky-rights .far {
+  font-weight: 100;
 }
 
 @media (min-width: 700px) {
   header {
     grid-template-columns: repeat(5, 1fr);
+  }
+
+  footer section#sky-information {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+  footer section#sky-information .sky-app {
+    grid-column: 1/2;
+    padding-right: 60px;
+  }
+  footer section#sky-information .sky-app .minha-sky p {
+    color: #494949;
+    padding-right: 30px;
+  }
+  footer section#sky-information .footer-about {
+    grid-column: 2/3;
+  }
+  footer section#sky-information .footer-responsibilities {
+    grid-column: 3/4;
+  }
+  footer section#sky-information .footer-help {
+    grid-column: 2/3;
+  }
+  footer section#sky-information .footer-sky-companies {
+    grid-column: 3/4;
   }
 }
 

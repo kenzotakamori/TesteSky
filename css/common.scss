@@ -1,5 +1,9 @@
-button {
+button, a {
     cursor: pointer;
+}
+
+.inactive {
+    display: none!important;
 }
 
 @media(min-width: 700px) {
