@@ -2,6 +2,18 @@ button, a {
     cursor: pointer;
 }
 
+
+body {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+.container { 
+    max-width: 1080px; 
+	margin: 0 auto !important; 
+	float: none !important; 
+}
+
 .inactive {
     display: none!important;
 }

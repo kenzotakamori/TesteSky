@@ -11,37 +11,39 @@
 </html>
 <body>
     <header>
-        <div class="sky-logo">
-            <img src="images/logo-sky.svg">
+        <div class="container">
+            <div class="sky-logo">
+                <img src="images/logo-sky.svg">
+            </div>
+            <button class="hamburguer-menu mobile-only">
+                <i class="fa fa-bars"></i>
+            </button>
+            <div class="header-icons desktop-only">
+                <button>
+                    <i class="fas fa-child"></i>
+                </button>
+                <button>
+                    <i class="fas fa-adjust"></i>
+                </button>
+                <button>
+                    <div>A-</div>
+                </button>
+                <button>
+                    <div>A+</div>
+                </button>
+            </div>
+            <button class="play-button desktop-only">
+                <i class="fas fa-play"></i>
+                <span>Play</span>
+            </button>
+            <button class="login-button desktop-only">
+                <i class="far fa-user"></i>
+                <span>Entrar</span>
+            </button>
+            <button class="search-button desktop-only">
+                <i class="fas fa-search"></i>
+            </button>
         </div>
-        <button class="hamburguer-menu mobile-only">
-            <i class="fa fa-bars"></i>
-        </button>
-        <div class="header-icons desktop-only">
-            <button>
-                <i class="fas fa-child"></i>
-            </button>
-            <button>
-                <i class="fas fa-adjust"></i>
-            </button>
-            <button>
-                <div>A-</div>
-            </button>
-            <button>
-                <div>A+</div>
-            </button>
-        </div>
-        <button class="play-button desktop-only">
-            <i class="fas fa-play"></i>
-            <span>Play</span>
-        </button>
-        <button class="login-button desktop-only">
-            <i class="far fa-user"></i>
-            <span>Entrar</span>
-        </button>
-        <button class="search-button desktop-only">
-            <i class="fas fa-search"></i>
-        </button>
     </header>
     <nav>
         <ul>
@@ -51,112 +53,122 @@
         </ul>
     </nav>
     <main>
-        <div>
-            Aqui vai o carrossel
+        
+            <div>
+                Aqui vai o carrossel
+            </div>
+            <section>
+                <h3>Exemplo de título</h3>
+                <div>Lista de filmes</div>
+            </section>
         </div>
-        <section>
-            <h3>Exemplo de título</h3>
-            <div>Lista de filmes</div>
-        </section>
     </main>
     <footer>
         <section id="sky-social-media">
-            <div class="logo-sky-footer">
-                <img src="images/logo-sky.svg">
-            </div>
-            <div class="social-icons">
-                <button>
-                    <i class="fab fa-facebook-f"></i>
-                </button>
-                <button>
-                    <i class="fab fa-twitter"></i>
-                </button>
-                <button>
-                    <i class="fab fa-youtube"></i>
-                </button>
-                <button>
-                    <i class="fab fa-instagram"></i>
-                </button>
+            <div class="container">
+                <div class="logo-sky-footer">
+                    <img src="images/logo-sky.svg">
+                </div>
+                <div class="social-icons">
+                    <button>
+                        <i class="fab fa-facebook-f"></i>
+                    </button>
+                    <button>
+                        <i class="fab fa-twitter"></i>
+                    </button>
+                    <button>
+                        <i class="fab fa-youtube"></i>
+                    </button>
+                    <button>
+                        <i class="fab fa-instagram"></i>
+                    </button>
+                </div>
             </div>
         </section>
         <section id="sky-information">
-            <div class="sky-app">
-                <div class="minha-sky">
-                    <img src="images/logo-sky-2.png">
-                    <p>
-                        Baixe no seu celular o app
-                        Minha SKY e divirta-se.
-                    </p>
-                </div>                
-                <div class="apple-store desktop-only">
-                    <p>Disponível na <span>Apple Store</span></p>
-                    <i class="fab fa-apple"></i>
+            <div class="container">
+                <div class="sky-app">
+                    <div class="minha-sky">
+                        <img src="images/logo-sky-2.png">
+                        <p>
+                            Baixe no seu celular o app
+                            Minha SKY e divirta-se.
+                        </p>
+                    </div>                
+                    <div class="apple-store desktop-only">
+                        <p>Disponível na <span>Apple Store</span></p>
+                        <i class="fab fa-apple"></i>
+                    </div>
+                    <div class="google-play desktop-only">
+                        <p>Disponível na <span>Google Play</span></p>
+                        <i class="fab fa-google-play"></i>
+                    </div>
                 </div>
-                <div class="google-play desktop-only">
-                    <p>Disponível na <span>Google Play</span></p>
-                    <i class="fab fa-google-play"></i>
+                <div class="footer-about">
+                    <h3>
+                        Sobre
+                        <i class="fas fa-chevron-down mobile-only"></i>
+                        <i class="fas fa-chevron-up inactive mobile-only"></i>
+                    </h3>
+                    <div class="links">
+                        <a href="#">Nossa história</a>
+                        <a href="#">Imprensa</a>
+                        <a href="#">Prêmios conquistados</a>
+                        <a href="#">Credenciamento</a>
+                        <a href="#">Trabalhe com a gente</a>
+                        <a href="#">Promoção</a>
+                    </div>
                 </div>
-            </div>
-            <div class="footer-about">
-                <h3>
-                    Sobre
-                    <i class="fas fa-chevron-down mobile-only"></i>
-                    <i class="fas fa-chevron-up inactive mobile-only"></i>
-                </h3>
-                <div class="links">
-                    <a href="#">Nossa história</a>
-                    <a href="#">Imprensa</a>
-                    <a href="#">Prêmios conquistados</a>
-                    <a href="#">Credenciamento</a>
-                    <a href="#">Trabalhe com a gente</a>
-                    <a href="#">Promoção</a>
+                <div class="footer-responsibilities">
+                    <h3>
+                        Nossas responsabilidades
+                        <i class="fas fa-chevron-down mobile-only"></i>
+                        <i class="fas fa-chevron-up inactive mobile-only"></i>
+                    </h3>
+                    <div class="links">
+                        <a href="#">Conselho aos usuários</a>
+                        <a href="#">Pesquisa Anatel</a>
+                        <a href="#">Relatórios de transparência</a>
+                        <a href="#">Responsabilidade social</a>
+                        <a href="#">Acessibilidade</a>
+                    </div>
                 </div>
-            </div>
-            <div class="footer-responsibilities">
-                <h3>
-                    Nossas responsabilidades
-                    <i class="fas fa-chevron-down mobile-only"></i>
-                    <i class="fas fa-chevron-up inactive mobile-only"></i>
-                </h3>
-                <div class="links">
-                    <a href="#">Conselho aos usuários</a>
-                    <a href="#">Pesquisa Anatel</a>
-                    <a href="#">Relatórios de transparência</a>
-                    <a href="#">Responsabilidade social</a>
-                    <a href="#">Acessibilidade</a>
+                <div class="footer-help">
+                    <h3>
+                        Ajuda
+                        <i class="fas fa-chevron-down mobile-only"></i>
+                        <i class="fas fa-chevron-up inactive mobile-only"></i>
+                    </h3>
+                    <div class="links">
+                        <a href="#">Central de ajuda</a>
+                        <a href="#">Manuais</a>
+                    </div>
                 </div>
-            </div>
-            <div class="footer-help">
-                <h3>
-                    Ajuda
-                    <i class="fas fa-chevron-down mobile-only"></i>
-                    <i class="fas fa-chevron-up inactive mobile-only"></i>
-                </h3>
-                <div class="links">
-                    <a href="#">Central de ajuda</a>
-                    <a href="#">Manuais</a>
+                <div class="footer-sky-companies">
+                    <h3>
+                        Sky Empresas
+                    </h3>
                 </div>
-            </div>
-            <div class="footer-sky-companies">
-                <h3>
-                    Sky Empresas
-                </h3>
             </div>
         </section>
         <section id="breadcrumbs">
-            <a href="#">Início</a><span>|</span>
-            <a href="#">Política de Privacidade</a><span>|</span>
-            <a href="#">Contratos gerais</a><span>|</span>
-            <a href="#">Contratos Pré-pago</a><span>|</span>
-            <a href="#">Cancelamento</a><span>|</span>
-            <a href="#">Ouvidoria</a><span>|</span>
-            <a href="#">Consumidor.gov</a>
+            <div class="container">
+                <a href="#">Início</a><span>|</span>
+                <a href="#">Política de Privacidade</a><span>|</span>
+                <a href="#">Contratos gerais</a><span>|</span>
+                <a href="#">Contratos Pré-pago</a><span>|</span>
+                <a href="#">Cancelamento</a><span>|</span>
+                <a href="#">Ouvidoria</a><span>|</span>
+                <a href="#">Consumidor.gov</a>
+            </div>
         </section>
         <section id="sky-rights">
-            <i class="far fa-registered"></i> 
-            Todos os direitos reservados 2018. Todas as marcas SKY e qualquer
-            propriedade intelectual inserida nelas são de propriedade da SKY Internacional AG 
-            e usadas pea SKY Serviços de Banda Larga LTDA. mediante licença.
+            <div class="container">
+                <i class="far fa-registered"></i> 
+                Todos os direitos reservados 2018. Todas as marcas SKY e qualquer
+                propriedade intelectual inserida nelas são de propriedade da SKY Internacional AG 
+                e usadas pea SKY Serviços de Banda Larga LTDA. mediante licença.
+            </div>   
         </section>
     </footer>
 </body>
