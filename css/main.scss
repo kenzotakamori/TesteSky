@@ -2,13 +2,29 @@ main {
     #highlight-carousel {
         .highlight-tile {
             img {
-                max-width: 70vw;
+                max-width: 90vw;
+                border-radius: 10px;
+                box-shadow: $shadow;
+                -webkit-box-shadow: $shadow;
+                -moz-box-shadow: $shadow;
             }
         }
     }
     .movie-tile {
         img {
             max-height: 250px;
+        }
+    }
+}
+
+@media(min-width: 700px) {
+    main {
+        #highlight-carousel {
+            .highlight-tile {
+                img {
+                    max-width: 50vw;
+                }
+            }
         }
     }
 }

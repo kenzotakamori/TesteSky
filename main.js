@@ -23,6 +23,7 @@ $(document).ready(function(){
             appendMovieSectionByCategory(actionMovies, '#action', 'Ação e Aventura');
             appendMovieSectionByCategory(suspenseMovies, '#suspense', 'Suspense');
             appendMovieSectionByCategory(comedyMovies, '#comedy', 'Comédia');
+            slickCarousels();
         })
     };
 
@@ -63,10 +64,17 @@ $(document).ready(function(){
 
     function appendMovieSectionByCategory(movies, id, category) {
         $(id).append('<h2>' + category + '</h2>');
+        let carousel = buildMovieCarousel(movies);
+        $(id).append(carousel);
+    };
+
+    function buildMovieCarousel(movies) {
+        let carousel = '<div class="movie-carousel">';
         movies.forEach(function(movie){
             let tile = buildMovieTile(movie);
-            $(id).append(tile);
+            carousel += tile;
         })
+        return carousel + '</div>'
     };
 
     function buildMovieTile(movie) {
@@ -74,6 +82,30 @@ $(document).ready(function(){
             movie.images[0].url + '"/></div>'
         return tile;
     };
+
+    function slickCarousels() {
+        $("#highlight-carousel").slick({
+            dots: true,
+            centerMode: true,
+            centerPadding: '12.5vw',
+            slidesToShow: 1,
+            responsive: [
+                {
+                    breakpoint: 700,
+                    settings: {
+                        dots: false,
+                        arrows: false,
+                        centerMode: true,
+                        centerPadding: '10px',
+                        slidesToShow: 1
+                    }
+                }
+            ]
+        });
+        $("#action").find(".movie-carousel").slick();
+        $("#suspense").find(".movie-carousel").slick();
+        $("#comedy").find(".movie-carousel").slick();
+    }
 
     init();
 });
