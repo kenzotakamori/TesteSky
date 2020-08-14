@@ -109,7 +109,7 @@ $(document).ready(function(){
         $("#highlight-carousel").slick({
             dots: true,
             centerMode: true,
-            centerPadding: '10vw',
+            centerPadding: '25vw',
             infinite: true,
             slidesToShow: 1,
             responsive: [
@@ -119,7 +119,7 @@ $(document).ready(function(){
                         dots: false,
                         arrows: false,
                         centerMode: true,
-                        centerPadding: '40px',
+                        centerPadding: '2vw',
                         slidesToShow: 1
                     }
                 }
