@@ -30,6 +30,9 @@ main {
                     max-width: 50vw;
                 }
             }
+            .slick-slide:not(.slick-center){
+                transform: scale(0.9);
+            }
         }
         .movie-tile {
             img {

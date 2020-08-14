@@ -135,6 +135,9 @@ main section h2 {
   main #highlight-carousel .highlight-tile img {
     max-width: 50vw;
   }
+  main #highlight-carousel .slick-slide:not(.slick-center) {
+    transform: scale(0.9);
+  }
   main .movie-tile img {
     max-width: 14vw;
   }
