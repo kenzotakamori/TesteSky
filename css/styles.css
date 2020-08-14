@@ -24,7 +24,7 @@ body {
   }
 }
 @media (max-width: 700px) {
-  .desktop-only {
+  .desktop-only, .hide-for-mobile {
     display: none !important;
   }
 }
@@ -276,6 +276,9 @@ footer section#sky-rights .far {
   }
   footer section#sky-information .container .footer-sky-companies {
     grid-column: 3/4;
+  }
+  footer section#sky-information .links {
+    display: inline-grid;
   }
 }
 

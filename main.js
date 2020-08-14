@@ -27,7 +27,7 @@ $(document).ready(function(){
             category: 'Drama',
             movies: []
         }
-    ]
+    ];
     function buildPageOnRequest() {
         $.get(url, function(data){
             let highlightMovies = getHighlightMovies(data);
@@ -103,7 +103,7 @@ $(document).ready(function(){
         catalog.forEach(function(item){
             slickMovieCarousel(item.id);
         })
-    }
+    };
 
     function slickHighlightCarousel() {
         $("#highlight-carousel").slick({
@@ -125,7 +125,7 @@ $(document).ready(function(){
                 }
             ]
         });
-    }
+    };
 
     function slickMovieCarousel(id) {
         $(id).find(".movie-carousel").slick({
@@ -145,7 +145,7 @@ $(document).ready(function(){
                 }
             ]
         });
-    }
+    };
 
     init();
 });

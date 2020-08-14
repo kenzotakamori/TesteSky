@@ -10,6 +10,22 @@
         <link rel="stylesheet" href="./css/styles.css">
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
         <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+        <script>
+            function toggleOptions(el) {
+                if($(window).width() <= 700) {
+                    let hidden = $(el).find('.links').hasClass('hide-for-mobile');
+                    if (hidden) {
+                        $(el).find('.links').removeClass('hide-for-mobile');
+                        $(el).find('.fa-chevron-down').addClass('inactive');
+                        $(el).find('.fa-chevron-up').removeClass('inactive');
+                    } else {
+                        $(el).find('.links').addClass('hide-for-mobile');
+                        $(el).find('.fa-chevron-up').addClass('inactive');
+                        $(el).find('.fa-chevron-down').removeClass('inactive');
+                    }
+                } 
+            };
+        </script>
     </head>
 </html>
 <body>

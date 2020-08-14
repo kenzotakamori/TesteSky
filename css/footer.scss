@@ -139,6 +139,9 @@ footer {
                     grid-column: 3 / 4;
                 }
             }
+            .links {
+                display: inline-grid;
+            }
         }
     }
 }
