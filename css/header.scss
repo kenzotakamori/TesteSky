@@ -23,6 +23,7 @@ header {
                 height: 25px;
                 border-radius: 12.5px;
                 border-style: none;
+                margin: 0 5px 0 5px;
                 &:hover {
                     background-color: #a1a1a1;
                 }
@@ -85,7 +86,7 @@ nav ul {
 @media(min-width: 700px) {
     header {
         .container {
-            grid-template-columns: repeat(5, 1fr);
+            grid-template-columns: auto 1fr auto 2fr auto auto
         }
     }
 }

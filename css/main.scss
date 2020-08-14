@@ -44,5 +44,19 @@ main {
                 padding-left: 5vw;
             }
         }
+        .slick-prev {
+            z-index: 10;
+            left: 0;
+            &::before {
+                color: #494949;
+            }
+        }
+        .slick-next {
+            z-index: 10;
+            right: 0;
+            &::before {
+                color: #494949;
+            }
+        }
     }
 }

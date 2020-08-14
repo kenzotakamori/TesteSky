@@ -54,6 +54,7 @@ header .container .header-icons button {
   height: 25px;
   border-radius: 12.5px;
   border-style: none;
+  margin: 0 5px 0 5px;
 }
 header .container .header-icons button:hover {
   background-color: #a1a1a1;
@@ -110,7 +111,7 @@ nav ul li.unselected {
 
 @media (min-width: 700px) {
   header .container {
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: auto 1fr auto 2fr auto auto;
   }
 }
 main #highlight-carousel {
@@ -143,6 +144,20 @@ main section h2 {
   }
   main section h2 {
     padding-left: 5vw;
+  }
+  main .slick-prev {
+    z-index: 10;
+    left: 0;
+  }
+  main .slick-prev::before {
+    color: #494949;
+  }
+  main .slick-next {
+    z-index: 10;
+    right: 0;
+  }
+  main .slick-next::before {
+    color: #494949;
   }
 }
 footer {
@@ -195,7 +210,6 @@ footer section#sky-information .sky-app .minha-sky {
   display: grid;
   place-items: center;
   grid-template-columns: auto 1fr;
-  height: 90px;
 }
 footer section#sky-information .sky-app .minha-sky img {
   height: 60px;
@@ -219,9 +233,9 @@ footer section#sky-information .sky-app .apple-store span, footer section#sky-in
   font-size: 1.3em;
 }
 footer section#sky-information .sky-app .apple-store i, footer section#sky-information .sky-app .google-play i {
-  font-size: 35px;
-  height: 60px;
-  width: 60px;
+  font-size: 30px;
+  height: 58px;
+  width: 58px;
   border: 3px solid #494949;
   border-radius: 30px;
   border-left-color: transparent;
@@ -234,6 +248,9 @@ footer section#sky-information h3 {
 }
 footer section#sky-information .links {
   display: inline-grid;
+}
+footer section#sky-information .footer-about, footer section#sky-information .footer-responsibilities, footer section#sky-information .footer-help, footer section#sky-information .footer-sky-companies {
+  border-top: 1px solid #a5a5a5;
 }
 footer section#breadcrumbs {
   padding: 15px;
@@ -279,6 +296,9 @@ footer section#sky-rights .far {
   }
   footer section#sky-information .container .footer-sky-companies {
     grid-column: 3/4;
+  }
+  footer section#sky-information .container .footer-about, footer section#sky-information .container .footer-responsibilities, footer section#sky-information .container .footer-help, footer section#sky-information .container .footer-sky-companies {
+    border-top: none;
   }
   footer section#sky-information .links {
     display: inline-grid;
