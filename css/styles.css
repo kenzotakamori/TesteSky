@@ -113,20 +113,33 @@ nav ul li.unselected {
     grid-template-columns: repeat(5, 1fr);
   }
 }
+main #highlight-carousel {
+  padding-top: 20px;
+}
 main #highlight-carousel .highlight-tile img {
   max-width: 90vw;
-  border-radius: 20px;
-  box-shadow: 30px 0px 40px rgba(0, 0, 0, 0.1), -30px 0px 40px rgba(0, 0, 0, 0.1);
-  -webkit-box-shadow: 30px 0px 40px rgba(0, 0, 0, 0.1), -30px 0px 40px rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 30px 0px 40px rgba(0, 0, 0, 0.1), -30px 0px 40px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
 }
 main .movie-tile img {
-  max-height: 250px;
+  max-width: 35vw;
+  border-radius: 5px;
+}
+main section {
+  margin-bottom: 20px;
+}
+main section h2 {
+  padding: 15px;
 }
 
 @media (min-width: 700px) {
   main #highlight-carousel .highlight-tile img {
     max-width: 50vw;
+  }
+  main .movie-tile img {
+    max-width: 14vw;
+  }
+  main section h2 {
+    padding-left: 5vw;
   }
 }
 footer {

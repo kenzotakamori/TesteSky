@@ -11,18 +11,33 @@ $(document).ready(function(){
     };
 
     var url = 'https://sky-frontend.herokuapp.com/movies';
+    var catalog = [
+        {
+            id:'#action',
+            category: 'Ação e Aventura',
+            movies: []
+        },
+        {
+            id:'#suspense',
+            category: 'Suspense',
+            movies: []
+        },
+        {
+            id:'#drama',
+            category: 'Drama',
+            movies: []
+        }
+    ]
     function buildPageOnRequest() {
         $.get(url, function(data){
             let highlightMovies = getHighlightMovies(data);
             let movieOptions = getMovieOptions(data);
-            let actionMovies = getMoviesByCategory(movieOptions, 'Ação e Aventura');
-            let suspenseMovies = getMoviesByCategory(movieOptions, 'Suspense');
-            let comedyMovies = getMoviesByCategory(movieOptions, 'Comédia');
-            
+
             appendHighlightCarousel(highlightMovies);
-            appendMovieSectionByCategory(actionMovies, '#action', 'Ação e Aventura');
-            appendMovieSectionByCategory(suspenseMovies, '#suspense', 'Suspense');
-            appendMovieSectionByCategory(comedyMovies, '#comedy', 'Comédia');
+            catalog.forEach(function(item){
+                getMoviesByCategory(movieOptions, item);
+                appendMovieSectionByCategory(item);
+            })
             slickCarousels();
         })
     };
@@ -43,9 +58,9 @@ $(document).ready(function(){
         });
     };
 
-    function getMoviesByCategory(options, category) {
-        return options.filter(function(option){
-            return option.categories.indexOf(category) >= 0;
+    function getMoviesByCategory(options, item) {
+        item.movies = options.filter(function(option){
+            return option.categories.indexOf(item.category) >= 0;
         })
     };
 
@@ -62,10 +77,10 @@ $(document).ready(function(){
         return tile;
     };
 
-    function appendMovieSectionByCategory(movies, id, category) {
-        $(id).append('<h2>' + category + '</h2>');
-        let carousel = buildMovieCarousel(movies);
-        $(id).append(carousel);
+    function appendMovieSectionByCategory(item) {
+        $(item.id).append('<h2>' + item.category + '</h2>');
+        let carousel = buildMovieCarousel(item.movies);
+        $(item.id).append(carousel);
     };
 
     function buildMovieCarousel(movies) {
@@ -84,10 +99,18 @@ $(document).ready(function(){
     };
 
     function slickCarousels() {
+        slickHighlightCarousel();
+        catalog.forEach(function(item){
+            slickMovieCarousel(item.id);
+        })
+    }
+
+    function slickHighlightCarousel() {
         $("#highlight-carousel").slick({
             dots: true,
             centerMode: true,
-            centerPadding: '12.5vw',
+            centerPadding: '10vw',
+            infinite: true,
             slidesToShow: 1,
             responsive: [
                 {
@@ -96,15 +119,32 @@ $(document).ready(function(){
                         dots: false,
                         arrows: false,
                         centerMode: true,
-                        centerPadding: '10px',
+                        centerPadding: '40px',
                         slidesToShow: 1
                     }
                 }
             ]
         });
-        $("#action").find(".movie-carousel").slick();
-        $("#suspense").find(".movie-carousel").slick();
-        $("#comedy").find(".movie-carousel").slick();
+    }
+
+    function slickMovieCarousel(id) {
+        $(id).find(".movie-carousel").slick({
+            arrows: true,
+            centerMode: true,
+            slidesToShow: 6,
+            slidesToScroll: 6,
+            responsive: [
+                {
+                    breakpoint: 700,
+                    settings: {
+                        arrows: false,
+                        centerMode: true,
+                        slidesToShow: 2,
+                        slidesToScroll: 2
+                    }
+                }
+            ]
+        });
     }
 
     init();

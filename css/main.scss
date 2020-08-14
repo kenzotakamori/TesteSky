@@ -1,18 +1,23 @@
 main {
     #highlight-carousel {
+        padding-top: 20px;
         .highlight-tile {
             img {
                 max-width: 90vw;
-                border-radius: 10px;
-                box-shadow: $shadow;
-                -webkit-box-shadow: $shadow;
-                -moz-box-shadow: $shadow;
+                border-radius: 5px;
             }
         }
     }
     .movie-tile {
         img {
-            max-height: 250px;
+            max-width: 35vw;
+            border-radius: 5px;
+        }
+    }
+    section {
+        margin-bottom: 20px;
+        h2 {
+            padding: 15px;
         }
     }
 }
@@ -24,6 +29,16 @@ main {
                 img {
                     max-width: 50vw;
                 }
+            }
+        }
+        .movie-tile {
+            img {
+                max-width: 14vw;
+            }
+        }
+        section {
+            h2 {
+                padding-left: 5vw;
             }
         }
     }
