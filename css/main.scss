@@ -1,0 +1,14 @@
+main {
+    #highlight-carousel {
+        .highlight-tile {
+            img {
+                max-width: 70vw;
+            }
+        }
+    }
+    .movie-tile {
+        img {
+            max-height: 250px;
+        }
+    }
+}

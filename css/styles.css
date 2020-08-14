@@ -113,6 +113,13 @@ nav ul li.unselected {
     grid-template-columns: repeat(5, 1fr);
   }
 }
+main #highlight-carousel .highlight-tile img {
+  max-width: 70vw;
+}
+main .movie-tile img {
+  max-height: 150px;
+}
+
 footer {
   width: 100%;
   background-color: #e4e4e4;
